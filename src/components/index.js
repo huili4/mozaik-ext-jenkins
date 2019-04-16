@@ -4,6 +4,7 @@ import JobBuilds          from './JobBuilds.jsx';
 import JobBuildsHistogram from './JobBuildsHistogram.jsx';
 import JobStatusProgress  from './JobStatusProgress.jsx';
 import View               from './View.jsx';
+import JobTestResult      from './JobTestResult.jsx';
 
 
 export default {
@@ -12,5 +13,6 @@ export default {
     JobStatusProgress,
     JobBuilds,
     JobBuildsHistogram,
-    View
+    View,
+    JobTestResult
 };

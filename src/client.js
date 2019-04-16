@@ -104,6 +104,10 @@ const client = mozaik => {
                     ;
                 })
             ;
+        },
+        jobTestResult(params) {
+            return buildRequest(`/job/${ params.job }/lastCompletedBuild/api/json?pretty=true`)
+                .then(res => res.body);
         }
     };
 
