@@ -47,6 +47,7 @@ class JobTestResult extends Component {
                 testResultNode = (
                     <div className="jenkins__job-test-result__aborted">
                         ABORTED
+                        <i className="fa fa-close"/>&nbsp;
                     </div>
                 );
             } else {

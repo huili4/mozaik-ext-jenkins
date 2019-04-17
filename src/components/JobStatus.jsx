@@ -43,6 +43,8 @@ class JobStatus extends Component {
                 const currentBuild = builds[0];
                 if (currentBuild.result === 'SUCCESS') {
                     iconClasses = 'fa fa-check';
+                } else if (!currentBuild.result) {
+                    iconClasses = 'fa fa-spinner fa-spin';
                 }
 
                 statusClasses = `widget__body__colored jenkins__view__job__build__colored_status--${ getBuildStatus(currentBuild).toLowerCase() }`;

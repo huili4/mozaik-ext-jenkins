@@ -10,6 +10,8 @@
       fill $success-color
     .result--failure
       fill $failure-color
+    .result--unstable
+      fill #ffd356d1
 
   &__job
     position relative
@@ -91,36 +93,33 @@
       margin-top 10px
       height 20%
       display block
-      font-size 20px
       line-height 20px
       &__desc
         display inline-block
-        font-size 15px
+        font-size 1.5rem
         margin 10px 20px
       &__name
         display inline-block
-        font-size 15px
+        font-size 1.5rem
         font-weight 600
     &__time
       height 20%
       display block
-      font-size 15px
+      font-size 1.4rem
       margin 0 20px 10px 20px
       color #8ED1FC
     &__loading
-      font-size 32px
       display block
-      width 100%
-      text-align center
-      font-weight 600
+      margin 40px 0 0 50px
+      font-size 1.6em
     &__aborted
-      font-size 32px
       display block
       width 100%
       text-align center
-      color lightgray
-      font-weight 600
       margin-top 20px
+      font-size 5rem
+      color #A8A8A8
+      font-weight 600
 
 .widget
   &__body
