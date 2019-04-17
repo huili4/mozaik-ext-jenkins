@@ -52,7 +52,7 @@ class JobTestResult extends Component {
             } else {
                 const actions = result.actions;
                 let testResult = [
-                    {id: 'fail', label: 'fail', color: '#B80000', count: 0}, 
+                    {id: 'fail', label: 'fail', color: '#B80000', count: 0},
                     {id: 'skip', label: 'skip', color: '#FCCB00', count: 0},
                     {id: 'success', label: 'success', color: '#2A8B2B', count: 0}
                 ];

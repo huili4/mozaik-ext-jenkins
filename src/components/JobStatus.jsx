@@ -74,15 +74,18 @@ class JobStatus extends Component {
             const currentBuild = builds[0];
             if (currentBuild.result === 'SUCCESS') {
                 iconClasses = 'fa fa-check';
+            } else if (!currentBuild.result) {
+                iconClasses = 'fa fa-spinner fa-spin';
             }
 
             statusClasses = `jenkins__job-status__current__status jenkins__job-status__current__status--${ getBuildStatus(currentBuild).toLowerCase() }`;
+            const resultText = currentBuild.result || 'ONGOING';
 
             currentNode = (
                 <div className="jenkins__job-status__current">
                     Build #{currentBuild.number}<br />
                     <a className={statusClasses} href={currentBuild.url}>
-                        {currentBuild.result}&nbsp;
+                        {resultText}&nbsp;
                         <i className={iconClasses} />
                     </a><br/>
                     <time className="jenkins__job-status__current__time">
