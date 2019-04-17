@@ -83,6 +83,45 @@
       font-size 13px
       color darken($main-txt-color, 20)
 
+  &__job-test-result
+    .widget__body
+      display flex
+      flex-direction column
+    &__title
+      margin-top 10px
+      height 20%
+      display block
+      font-size 20px
+      line-height 20px
+      &__desc
+        display inline-block
+        font-size 15px
+        margin 10px 20px
+      &__name
+        display inline-block
+        font-size 15px
+        font-weight 600
+    &__time
+      height 20%
+      display block
+      font-size 15px
+      margin 0 20px 10px 20px
+      color #8ED1FC
+    &__loading
+      font-size 32px
+      display block
+      width 100%
+      text-align center
+      font-weight 600
+    &__aborted
+      font-size 32px
+      display block
+      width 100%
+      text-align center
+      color lightgray 
+      font-weight 600
+      margin-top 20px
+
 .widget
   &__body
     &__colored
