@@ -11,7 +11,7 @@
     .result--failure
       fill $failure-color
     .result--unstable
-      fill #ffd356d1
+      fill $warning-color
 
   &__job
     position relative
@@ -91,7 +91,7 @@
       flex-direction column
     &__title
       margin-top 10px
-      height 20%
+      height 15%
       display block
       line-height 20px
       &__desc
@@ -103,11 +103,14 @@
         font-size 1.5rem
         font-weight 600
     &__time
-      height 20%
+      height 15%
       display block
       font-size 1.4rem
-      margin 0 20px 10px 20px
+      margin 0 20px
       color #8ED1FC
+    &__chart
+      height 60%
+      display block
     &__loading
       display block
       margin 40px 0 0 50px

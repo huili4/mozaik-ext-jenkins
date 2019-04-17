@@ -53,9 +53,9 @@ class JobTestResult extends Component {
             } else {
                 const actions = result.actions;
                 let testResult = [
-                    {id: 'fail', label: 'fail', color: '#B80000', count: 0},
-                    {id: 'skip', label: 'skip', color: '#FCCB00', count: 0},
-                    {id: 'success', label: 'success', color: '#2A8B2B', count: 0}
+                    {id: 'fail', label: 'fail', color: '#de5029', count: 0},
+                    {id: 'skip', label: 'skip', color: '#d1be65', count: 0},
+                    {id: 'success', label: 'success', color: '#4ec2b4', count: 0}
                 ];
                 let totalCount = 0;
                 for (const action of actions) {
@@ -69,7 +69,9 @@ class JobTestResult extends Component {
                 }
 
                 testResultNode = (
-                    <Pie data={testResult} count={totalCount} countLabel={'tests'} innerRadius={0.7}/>
+                    <div className="jenkins__job-test-result__chart">
+                        <Pie data={testResult} count={totalCount} countLabel={'tests'} innerRadius={0.7}/>
+                    </div>
                 );
             }
         }
