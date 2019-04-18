@@ -111,7 +111,7 @@ key      | required |description                                   | notes
 
 ## Jenkins Job Status With Progress
 
-![jenkins job status](https://raw.githubusercontent.com/przemuh/mozaik-ext-jenkins/progress-job-status/preview/jenkins.job_status_progress.png)
+![jenkins job status](./preview/jenkins.job_status_progress.png)
 
 > Display job current build status with progress % - based on Job Status - bold.
 

@@ -55,7 +55,9 @@ class JobBuildsHistogram extends Component {
                     <i className="fa fa-bug"/>
                 </div>
                 <div className="widget__body">
-                    <BarChart data={[{ data: data }]} options={barChartOptions}/>
+                    <div className="jenkins__job-builds_histogram__chart">
+                        <BarChart data={[{ data: data }]} options={barChartOptions}/>
+                    </div>
                 </div>
             </div>
         );
