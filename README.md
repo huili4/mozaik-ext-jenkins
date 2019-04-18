@@ -154,6 +154,29 @@ key     | required | description
 ```
 
 
+## Jenkins Job Test Result
+
+![jenkins job test result](./preview/jenkins.job_test_result.png)
+
+### parameters
+
+key    | required | description
+-------|----------|--------------
+`job`  | yes      | *jenkins job identifier*
+
+### usage
+
+```javascript
+{
+   type: 'jenkins.job_test_result',
+   job: process.env.JENKINS_JOB_0,
+   columns: 1, rows: 1,
+   x: 0, y: 1
+}
+```
+
+
+
 [license-image]: https://img.shields.io/github/license/plouc/mozaik-ext-jenkins.svg?style=flat-square
 [license-url]: https://github.com/plouc/mozaik-ext-jenkins/blob/master/LICENSE.md
 [travis-image]: https://img.shields.io/travis/plouc/mozaik-ext-jenkins.svg?style=flat-square

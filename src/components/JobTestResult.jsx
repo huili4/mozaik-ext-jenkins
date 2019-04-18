@@ -69,9 +69,9 @@ class JobTestResult extends Component {
                 }
 
                 testResultNode = (
-                    <div className="jenkins__job-test-result__chart">
+                    <a href={result.url} className="jenkins__job-test-result__chart">
                         <Pie data={testResult} count={totalCount} countLabel={'tests'} innerRadius={0.7}/>
-                    </div>
+                    </a>
                 );
             }
         }
