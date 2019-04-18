@@ -37,7 +37,7 @@ class JobStatusProgress extends Component {
 
         const classList = [
             'widget__body__colored',
-            `jenkins__view__job__build__colored_status--${ (currentBuild.building ? previousStatus : currentStatus).toLowerCase() }`
+            `jenkins__view__job__build__colored_text_status--${ (currentBuild.building ? previousStatus : currentStatus).toLowerCase() }`
         ];
 
         const iconClassList = [
@@ -58,21 +58,27 @@ class JobStatusProgress extends Component {
         };
 
         return (
-            <div className={compact(classList).join(' ')}>
-                <div className="jenkins__job-status__current">
-                    Build #{currentBuild.number}<br />
-                    <a className="jenkins__job-status__current__status" href={currentBuild.url}>
-                        {title}&nbsp;<br />
-                        <i className={compact(iconClassList).join(' ')}/>&nbsp;
-                        <span className="jenkins__job-status__current__progress-number">
-                            {progress < 100 && `${Math.round(progress)}%`}
-                        </span>
-                    </a>
-                    {progress < 100 && <div className="jenkins__job-status__current__progress-bar" style={progressStyle}/>}
-                    <time className="jenkins__job-status__current__time">
-                        <i className="fa fa-clock-o"/>&nbsp;
-                        {moment(currentBuild.timestamp, 'x').fromNow()}
-                    </time>
+            <div>
+                <div className="widget__header">
+                    { title }
+                    <i className="fa fa-bug" />
+                </div>
+                <div className={compact(classList).join(' ')}>
+                    <div className="jenkins__job-status__current">
+                        Build #{currentBuild.number}<br />
+                        <a className="jenkins__job-status__current__status" href={currentBuild.url}>
+                            {title}&nbsp;<br />
+                            <i className={compact(iconClassList).join(' ')}/>&nbsp;
+                            <span className="jenkins__job-status__current__progress-number">
+                                {progress < 100 && `${Math.round(progress)}%`}
+                            </span>
+                        </a>
+                        {progress < 100 && <div className="jenkins__job-status__current__progress-bar" style={progressStyle}/>}
+                        <time className="jenkins__job-status__current__time">
+                            <i className="fa fa-clock-o"/>&nbsp;
+                            {moment(currentBuild.timestamp, 'x').fromNow()}
+                        </time>
+                    </div>
                 </div>
             </div>
         );
