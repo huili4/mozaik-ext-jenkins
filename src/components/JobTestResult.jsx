@@ -78,7 +78,7 @@ class JobTestResult extends Component {
         return(
             <div>
                 <div className="widget__header">
-                    Jenkins { job } Last Completed Build Result
+                    Jenkins { job } Last Completed Build
                     <i className="fa fa-bug" />
                 </div>
                 <div className="widget__body">

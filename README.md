@@ -72,6 +72,7 @@ key     | required | description
 key   | required | description
 ------|----------|---------------
 `job` | yes      | *jenkins job identifier*
+`cap` | no       | *number of builds to show*
 
 ### usage
 
