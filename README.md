@@ -73,6 +73,7 @@ key   | required | description
 ------|----------|---------------
 `job` | yes      | *jenkins job identifier*
 `cap` | no       | *number of builds to show*
+`time_unit`| no  | *minute or hour, the unit of build duration*
 
 ### usage
 
