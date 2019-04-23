@@ -122,12 +122,14 @@ key      | required |description                                   | notes
 key      | required |description                                   | notes
 ---------|----------|----------------------------------------------|-----------------------------------------
 `job`    | yes      | *jenkins job identifier*                     |
+`colorized`| no     | *widget background colorful or not*          |
 
 ### usage
 
 ```javascript
 {
   type: 'jenkins.job_status_progress', job: 'my-job',
+  colorized: true,
   columns: 1, rows: 1, x: 0, y: 0
 }
 ```

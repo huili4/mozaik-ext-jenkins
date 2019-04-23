@@ -29,15 +29,15 @@ class JobStatusProgress extends Component {
     }
 
     render() {
-        const { job } = this.props;
+        const { job, colorized } = this.props;
         const { currentBuild, previousBuild } = this.state;
         const currentStatus = getBuildStatus(currentBuild);
         const previousStatus = getBuildStatus(previousBuild);
         const title = this.props.title || `Jenkins job ${ job }`;
 
         const classList = [
-            'widget__body__colored',
-            `jenkins__view__job__build__colored_text_status--${ (currentBuild.building ? previousStatus : currentStatus).toLowerCase() }`
+            `widget__body__colored${ colorized ? '' : '_text' }`,
+            `jenkins__view__job__build__colored${ colorized ? '' : '_text' }_status--${ (currentBuild.building ? previousStatus : currentStatus).toLowerCase() }`
         ];
 
         const iconClassList = [
@@ -89,7 +89,8 @@ JobStatusProgress.displayName = 'JobStatusProgress';
 
 JobStatusProgress.propTypes = {
     job:   PropTypes.string.isRequired,
-    title: PropTypes.string
+    title: PropTypes.string,
+    colorized: PropTypes.bool
 };
 
 reactMixin(JobStatusProgress.prototype, ListenerMixin);
