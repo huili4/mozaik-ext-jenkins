@@ -86,9 +86,9 @@ class JobTestResult extends Component {
                         <span className="jenkins__job-test-result__title__desc">
                             Last Completed Test:
                         </span>
-                        <span className="jenkins__job-test-result__title__name">
-                            { fullDisplayName }
-                        </span>
+                    </div>
+                    <div className="jenkins__job-test-result__title__name">
+                        { fullDisplayName }
                     </div>
                     <div className="jenkins__job-test-result__time">
                         { testResultDateStr }
