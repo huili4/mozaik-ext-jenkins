@@ -82,15 +82,17 @@ class JobTestResult extends Component {
                     <i className="fa fa-bug" />
                 </div>
                 <div className="widget__body">
-                    <div className="jenkins__job-test-result__title" style="font-size:70%">
+                    <div className="jenkins__job-test-result__title">
+                        <span className="jenkins__job-test-result__title__desc" style="font-size:50%">
                             Last Completed Test:
+                        </span>
+                        <span className="jenkins__job-test-result__title__name" style="font-size:50%">
+                            { fullDisplayName }
+                        </span>
                     </div>
-                    <div className="jenkins__job-test-result__title__name" style="font-size:70%">
-                        { fullDisplayName }
-                    </div>
-                    <div className="jenkins__job-test-result__time" style="font-size:70%">
-                        { testResultDateStr }
-                    </div>
+                   <div className="jenkins__job-test-result__time">
+                      { testResultDateStr }
+                   </div>
                     {testResultNode}
                 </div>
             </div>
