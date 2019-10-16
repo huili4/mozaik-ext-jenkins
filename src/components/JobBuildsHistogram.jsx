@@ -33,7 +33,7 @@ class JobBuildsHistogram extends Component {
 
         // converts to format required by BarChart component
         const data = builds.map(build => ({
-            x:      build.number,
+            x:      build.name,
             y:      build.duration / 1000 / 60 / (time_unit == 'hour' ? 60 : 1), // converts ms to correct time unit
             result: build.result ? build.result.toLowerCase() : 'unknown'
         }));
